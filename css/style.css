@@ -1,15 +1,35 @@
 * {
     font-family: pfbeausans,Arial,sans-serif;
+    margin: 0;
 }
 
-/* navbar */
-header {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    right: 0%;
+header ul {
+    list-style:none;
 }
 
+header li {
+    display:inline-block;
+}
+
+/* sistema grid */
+/* .container {
+    display: grid;
+} */
+
+/* green button */
+.green_btn {
+    background-color: #38a020;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: .2em;
+    padding: .4em .9em;
+    height: 2em;
+    cursor: pointer;
+}
+
+
+/* navbar top */
 .nav_top {
     background-color: #262729;
     display: flex;
@@ -23,8 +43,23 @@ header {
     margin: .3em;
 }
 
+/* Second navbar */
 .main_nav {
+    /* display: none; */
     text-transform: uppercase;
+    padding: 2em 4em;
+    background-color: #ffffff;
+}
+
+.first_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color:#262729
 }
 
 /* iconos */
@@ -32,3 +67,140 @@ header {
     height: 1em;
 }
 
+
+/* slide */
+.slide {
+    border: .1em solid green;
+    position: relative;
+    width: 100%;    
+    height: 22.3em;
+}
+
+.slide ul{
+    padding: 0;
+}
+.slide li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* height: 22.3em; */
+}
+
+.slide_content{
+    height: 100%;
+    /* box-shadow: inset 500px 15px 10px 5px; */
+}
+
+.slide_img {  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.slide_text {
+    color: #ffffff;
+}
+
+.slide.green_btn{
+    padding: 1em;
+}
+
+.slide_btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content_two {
+    display: none;
+}
+
+.slide_btn button{
+    background: none;
+    border: none;
+    cursor: pointer
+}
+
+.previous_btn {
+    rotate: 180deg;
+}
+
+/* formulario crédito de consumo */
+.form_section {
+    padding: 2em 5em;
+}
+.credit_form {
+    background-color: #f6f7f6;
+    padding: 2em 3em;
+    border-radius: .5em;
+    border: .1em solid#d7dee9;
+   /* position: absolute;  */
+}
+
+.credit_form input {
+    padding: .5em;    
+    border-radius: .5em;
+    border: .1em solid #d7dee9;
+}
+
+/* slide de cards */
+.card_slide_section {
+    border: .1em solid #38a020;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    height: 26em;
+    width: 18em;
+    padding: 1em;
+    border-radius: .3em;
+}
+
+.card img {
+    border-radius: 1.5em;
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 1px 2px 2px #dbdbda;
+}
+
+.card_section .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anounce_card {
+    width: 20em;
+    height: 10em;
+    padding: 2em 4em;
+}
+
+footer{
+    background-color: #272629;
+    color: #f6f7f6;
+    /* height: 50px; */
+}
+
+footer h4 {
+    text-transform: uppercase;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: #f6f7f6;
+    text-decoration: underline;
+}
+
+.whatsapp {
+
+}
+
+.whatsapp a span {
+display: none;
+}
