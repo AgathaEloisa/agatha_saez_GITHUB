@@ -164,7 +164,7 @@ a{
 }
 
 .card:hover {
-    box-shadow: 1px 2px 2px #dbdbda;
+    box-shadow: -2px 3px 2px #dbdbda;
 }
 
 .card_section .column {
