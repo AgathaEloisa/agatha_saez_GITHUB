@@ -178,10 +178,31 @@ a{
     padding: 2em 4em;
 }
 
+
+/* Estilos del footer */
 footer{
     background-color: #272629;
     color: #f6f7f6;
+    display: grid;
+    grid-template-columns: 12;
+    grid-row: auto;
+    line-height: 2.3em;
     /* height: 50px; */
+}
+
+footer .nav_list:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    text-align: left;
+}
+
+footer .nav_list:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row: 1;
+    text-align: left;
+
 }
 
 footer h4 {
@@ -189,16 +210,39 @@ footer h4 {
 }
 
 footer ul {
+    padding-left: 0%;
     list-style: none;
 }
 
 footer a {
     color: #f6f7f6;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer p a {
+    color: #f6f7f6;
     text-decoration: underline;
 }
 
-.whatsapp {
+.end_paragraph {
+    grid-column: span 12;
+    grid-row: 2;
+}
 
+/* icono de whatsapp */
+
+.whatsapp {
+    grid-row: 3;
+    grid-column: 12;
+    /* text-align:  right; */
+}
+
+.whatsapp img {
+    width: 3em;
+    height: 3em;
 }
 
 .whatsapp a span {
