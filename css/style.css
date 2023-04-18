@@ -11,11 +11,6 @@ header li {
     display:inline-block;
 }
 
-/* sistema grid */
-/* .container {
-    display: grid;
-} */
-
 /* green button */
 .green_btn {
     background-color: #38a020;
@@ -28,13 +23,18 @@ header li {
     cursor: pointer;
 }
 
+.disabled {
+    background-color:  #7bbe6d;
+}
 
 /* navbar top */
 .nav_top {
     background-color: #262729;
     display: flex;
     justify-content:space-between;
-    padding: .7em 1em;
+    padding: .7em 0.5em;
+    font-size: .75rem;
+    text-transform: capitalize;
 }
 
 .nav_top div a {
@@ -45,9 +45,8 @@ header li {
 
 /* Second navbar */
 .main_nav {
-    /* display: none; */
     text-transform: uppercase;
-    padding: 2em 4em;
+    padding: 2em 5em;
     background-color: #ffffff;
 }
 
@@ -55,11 +54,16 @@ header li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 3em;
 }
 
 a{
     text-decoration: none;
-    color:#262729
+    color:#262729;
+    padding: 0.5rem;
+    letter-spacing: -.19px;
+    font-weight: 400;
+    font-size: .875rem;
 }
 
 /* iconos */
@@ -68,12 +72,11 @@ a{
 }
 
 
-/* slide */
+/* estilos del carrusel */
 .slide {
-    border: .1em solid green;
     position: relative;
     width: 100%;    
-    height: 22.3em;
+    height: 32em;
 }
 
 .slide ul{
@@ -83,11 +86,13 @@ a{
     position: absolute;
     width: 100%;
     height: 100%;
-    /* height: 22.3em; */
 }
 
-.slide_content{
+.slide_content{    
     height: 100%;
+    width: 70%;
+    line-height: 3em;
+    background: linear-gradient(90deg,#000 50%,rgba(2,2,2,.991) 53.33%,rgba(9,9,9,.964) 56.67%,hsla(0,0%,8%,.918) 60%,rgba(36,36,36,.853) 63.33%,rgba(56,57,57,.768) 66.67%,rgba(80,81,82,.668) 70%,hsla(210,1%,42%,.557) 73.33%,hsla(220,1%,54%,.443) 76.67%,hsla(220,2%,64%,.332) 80%,hsla(225,3%,74%,.232) 83.33%,hsla(216,5%,82%,.147) 86.67%,hsla(216,8%,88%,.082) 90%,rgba(233,235,238,.036) 93.33%,rgba(240,242,245,.009) 96.67%,rgba(242,244,247,0));
     /* box-shadow: inset 500px 15px 10px 5px; */
 }
 
@@ -98,8 +103,17 @@ a{
     z-index: -1;
 }
 
+.slide_content h2 {
+    font-size: 3em;
+}
+
 .slide_text {
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     color: #ffffff;
+    padding: 0em 5em;
 }
 
 .slide.green_btn{
@@ -109,6 +123,19 @@ a{
 .slide_btn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* contenido de la pag */
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    padding:  0em 5em;
 }
 
 .content_two {
@@ -131,10 +158,9 @@ a{
 }
 .credit_form {
     background-color: #f6f7f6;
-    padding: 2em 3em;
+    padding: 2em  3em;
     border-radius: .5em;
     border: .1em solid#d7dee9;
-   /* position: absolute;  */
 }
 
 .credit_form input {
@@ -145,17 +171,18 @@ a{
 
 /* slide de cards */
 .card_slide_section {
-    border: .1em solid #38a020;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
 }
 
 .card {
     height: 26em;
-    width: 18em;
+    width: 22em;
     padding: 1em;
     border-radius: .3em;
+}
+
+.card h3 {
+    color: #2b8f14;
 }
 
 .card img {
@@ -167,44 +194,118 @@ a{
     box-shadow: -2px 3px 2px #dbdbda;
 }
 
-.card_section .column {
+.row {
     display: flex;
     justify-content: space-between;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .anounce_card {
-    width: 20em;
-    height: 10em;
-    padding: 2em 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 47%;
+    height: 20em;
+}
+.card_text {
+    line-height: 1.7em;
 }
 
+.card_text h3 {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.card_text button {
+    margin-top: 2em;
+    /* text-align: center; */
+    padding: 1em 3em 2.2em 3em;
+    /* padding-bottom: 2em; */
+}
+
+.anounce_card img {
+    width: 100%;
+    height: 100%;
+}
 
 /* Estilos del footer */
 footer{
+    margin-top: .5em;
     background-color: #272629;
     color: #f6f7f6;
     display: grid;
     grid-template-columns: 12;
     grid-row: auto;
     line-height: 2.3em;
-    /* height: 50px; */
+    padding: 3em 0em;
 }
 
+/* grid primera fila */
+
 footer .nav_list:first-child {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
     grid-row: 1;
     text-align: left;
 }
 
 footer .nav_list:nth-child(2) {
-    grid-column-start: 3;
+    grid-column-start: 4;
     grid-column-end: 6;
     grid-row: 1;
     text-align: left;
 
 }
 
+.contacto {
+    margin-left: 17.2%;
+    grid-column-start: 10;
+    grid-column-end: 10;
+    grid-row: 1;
+    text-align: right;
+}
+.contacto button{
+    color: #3f3f3f;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: .2em;
+    padding: 0em 1.5em;
+    margin-bottom: 1.5em;
+    height: 5em;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.contacto button svg {
+    color: #3f3f3f;
+    margin-right: .4em;
+    width: 2em;
+    height: 2em;
+}
+
+.contacto button a {
+    color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rrss {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    filter: invert(99%);
+}
+
+.rrss svg {
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0em .3em;
+}
 footer h4 {
     text-transform: uppercase;
 }
@@ -214,12 +315,17 @@ footer ul {
     list-style: none;
 }
 
-footer a {
-    color: #f6f7f6;
+/* grid segunda fila */
+.end_paragraph {
+    padding-top: 1.2em;
+    text-align: center;
+    font-size: smaller;
+    grid-column: span 12;
+    grid-row: 2;
 }
 
-footer p {
-    text-align: center;
+footer a {
+    color: #f6f7f6;
 }
 
 footer p a {
@@ -227,17 +333,11 @@ footer p a {
     text-decoration: underline;
 }
 
-.end_paragraph {
-    grid-column: span 12;
-    grid-row: 2;
-}
-
-/* icono de whatsapp */
+/* grid tercera fila / icono de whatsapp */
 
 .whatsapp {
     grid-row: 3;
     grid-column: 12;
-    /* text-align:  right; */
 }
 
 .whatsapp img {
@@ -247,4 +347,8 @@ footer p a {
 
 .whatsapp a span {
 display: none;
+}
+
+.border_screen {
+    padding: 2em 14em;
 }
