@@ -6,7 +6,5 @@ en base al siguiente mockup
 
 ![Mockup](/Mockup/Mockup%202%20-%20Banco%20Falabella.png)
 
-Para ver mi versión puedes ver el despliegue [aquí](https://agathaeloisa.github.io/agatha_saez_GITHUB/)
-
 ## Desarrolladora
 * ***Agatha Sáez***
