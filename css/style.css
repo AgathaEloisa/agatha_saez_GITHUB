@@ -18,9 +18,10 @@ header li {
     color: #ffffff;
     border: none;
     border-radius: .2em;
-    padding: .4em .9em;
+    padding: .6em 1.1em;
     height: 2em;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .disabled {
@@ -93,7 +94,6 @@ a{
     width: 70%;
     line-height: 3em;
     background: linear-gradient(90deg,#000 50%,rgba(2,2,2,.991) 53.33%,rgba(9,9,9,.964) 56.67%,hsla(0,0%,8%,.918) 60%,rgba(36,36,36,.853) 63.33%,rgba(56,57,57,.768) 66.67%,rgba(80,81,82,.668) 70%,hsla(210,1%,42%,.557) 73.33%,hsla(220,1%,54%,.443) 76.67%,hsla(220,2%,64%,.332) 80%,hsla(225,3%,74%,.232) 83.33%,hsla(216,5%,82%,.147) 86.67%,hsla(216,8%,88%,.082) 90%,rgba(233,235,238,.036) 93.33%,rgba(240,242,245,.009) 96.67%,rgba(242,244,247,0));
-    /* box-shadow: inset 500px 15px 10px 5px; */
 }
 
 .slide_img {  
@@ -116,15 +116,52 @@ a{
     padding: 0em 5em;
 }
 
+.slide_text button, .first_line button{
+    padding-bottom: 2em;
+    padding-top: .8em;
+    border-radius: 4px;
+}
+
 .slide.green_btn{
     padding: 1em;
 }
 
-.slide_btn{
+.slide_btn {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.slide_active {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    z-index: 1;
+    height: 98%;
+    width: 100%;
+}
+
+.active {
+    background-color: #b9c901;
+    border-radius: 25px;
+    width: 1.5em;
+    height: .5em;
+    margin-right: .4em;
+    cursor: pointer;
+}
+
+.slide .dot {
+    background-color: #afb0b5;
+    border-radius: 100px;
+    width: .5em;
+    height: .5em;
+    margin-right: .4em;
+    cursor: pointer;
 }
 
 /* contenido de la pag */
@@ -145,7 +182,6 @@ a{
 .slide_btn button{
     background: none;
     border: none;
-    cursor: pointer
 }
 
 .previous_btn {
@@ -169,6 +205,11 @@ a{
     border: .1em solid #d7dee9;
 }
 
+.credit_form .green_btn {
+    padding-bottom: 1.7em;
+    padding-left: 4em;
+    padding-right: 4em;
+}
 /* slide de cards */
 .card_slide_section {
     width: 100%;
@@ -182,6 +223,8 @@ a{
 }
 
 .card h3 {
+    font-size: larger;
+    font-weight: bolder;
     color: #2b8f14;
 }
 
@@ -208,7 +251,7 @@ a{
     text-align: center;
     width: 47%;
     height: 20em;
-}
+}         
 .card_text {
     line-height: 1.7em;
 }
@@ -216,18 +259,38 @@ a{
 .card_text h3 {
     font-weight: 500;
     line-height: 1.2;
+    font-size: x-large;
+    color:#262729
 }
 
 .card_text button {
     margin-top: 2em;
     /* text-align: center; */
     padding: 1em 3em 2.2em 3em;
-    /* padding-bottom: 2em; */
 }
 
 .anounce_card img {
     width: 100%;
     height: 100%;
+}
+
+.slide_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide_card .dot, .dot_active {
+    background-color: #afb0b5;
+    border-radius: 100px;
+    width: .5em;
+    height: .5em;
+    margin-right: .4em;
+    cursor: pointer;
+}
+
+.dot_active {
+    background-color: #272629;
 }
 
 /* Estilos del footer */
